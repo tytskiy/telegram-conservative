@@ -1,0 +1,17 @@
+{
+  "name": "Trigger emoji on click in Web Telegram",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "Extension removes default functionality which opens emoji popup on hover.",
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.telegram.org/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
