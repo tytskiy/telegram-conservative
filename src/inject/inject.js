@@ -1,5 +1,9 @@
-function disableDefaultHover() {
-    var code = 'jQuery && jQuery(".composer_emoji_insert_btn").off("mouseenter mouseleave")';
+function disableDefaultHoverTrigger() {
+    var code = `
+         if (window.jQuery) {
+            window.jQuery('.composer_emoji_insert_btn').off('mouseenter mouseleave');
+         }
+    `;
 
     var script = document.createElement('script');
 
@@ -20,4 +24,4 @@ function onDomReady(callback) {
     });
 }
 
-onDomReady(disableDefaultHover);
+onDomReady(disableDefaultHoverTrigger);
